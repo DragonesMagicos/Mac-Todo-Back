@@ -24,4 +24,8 @@ public class ClienteService {
                     return clienteRepository.save(nuevoCliente);
                 });
     }
+    public Cliente findByEmail(String email) {
+        return clienteRepository.findByEmail(email).orElse(null);
+    }
+
 }
